@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Project specific - keep latest video only
+output/clips/mistake_[1-4]_*.mp4
+output/clips/mistake_[1-4]_*.gif
+temp/
+*.log
+logs/
+
+# Backup files
+backup_files/
+*.bak
+*.backup
+.git.backup/
+
+# Dependencies
+node_modules/
+npm-debug.log
+
+# DefensiveBootCore.ps1 - from separate project
+DefensiveBootCore.ps1

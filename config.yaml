@@ -1,0 +1,68 @@
+# 2XKO Analyzer Configuration
+
+analysis:
+  # Video processing settings
+  video:
+    min_brightness_change: 50  # Threshold for detecting hits/flashes
+    motion_threshold: 5  # Optical flow magnitude for motion detection
+    sample_rate: 5  # Analyze every N frames for performance
+    
+  # Game detection settings
+  game_events:
+    detect_hits: true
+    detect_blockstrings: true
+    detect_combos: true
+    detect_mistakes: true
+    
+  # Output settings
+  output:
+    export_json: true
+    export_csv: false
+    export_video_clips: false
+    
+characters:
+  blitzcrank:
+    full_name: "Blitzcrank"
+    archetype: "Grappler"
+    playstyle: "Close-range grab and strike mix-ups"
+    resource_mechanic: "Steam Gauge"
+    
+  ahri:
+    full_name: "Ahri"
+    archetype: "Zoner"
+    status: "Frame data coming soon"
+    
+  braum:
+    full_name: "Braum"
+    archetype: "Tank"
+    status: "Frame data coming soon"
+    
+matchup_types:
+  mirror:
+    description: "Same character vs same character"
+    focus: ["Character resource management", "Mix-up optimization", "Spacing"]
+    
+  favorable:
+    description: "Character with advantage"
+    focus: ["Winning strategies", "Optimal combo paths", "Pressure patterns"]
+    
+  unfavorable:
+    description: "Character at disadvantage"
+    focus: ["Defensive options", "Escape patterns", "Conversion techniques"]
+
+game_modes:
+  standard:
+    name: "Standard"
+    assist_mechanics: true
+    tag_available: true
+    
+  juggernaut:
+    name: "Juggernaut"
+    assist_mechanics: false
+    forced_switch: true
+    description: "Replaces tag mechanics with forced opponent switch on special move"
+
+frame_data_thresholds:
+  unsafe_on_block: -7  # Moves worse than this are unsafe
+  punishable_startup: 10  # Moves slower than this can be interrupted
+  combo_starter_hitstun: 10  # Minimum hitstun for combo extension
